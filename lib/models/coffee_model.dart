@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+/// Model class for Coffee API response.
 class CoffeeModel {
   String file;
 

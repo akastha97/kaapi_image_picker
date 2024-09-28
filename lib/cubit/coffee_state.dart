@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+/// Class that handles separate states for Coffee Cubit
 abstract class CoffeeState extends Equatable {
   @override
   List<Object?> get props => [];

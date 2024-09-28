@@ -106,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // Method to save the image to Gallery of the device
+  /// Method to save the image to Gallery of the device
   void saveImageToGallery(String imageUrl) async {
     bool hasPermission = await getGalleryPermissions();
 
@@ -211,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             )
                           else if (state is CoffeeError)
                             Center(
-                                key: ValueKey('error'),
+                                key: const ValueKey('error'),
                                 child: Text(state.errorMessage))
                           else if (state is CoffeeSuccess) ...[
                             Card(

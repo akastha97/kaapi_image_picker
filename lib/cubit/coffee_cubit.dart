@@ -5,11 +5,13 @@ import 'package:http/http.dart' as http;
 
 import 'coffee_state.dart';
 
+/// Cubit to handle the network calls for Coffee
 class CoffeeCubit extends Cubit<CoffeeState> {
   final http.Client client;
 
   CoffeeCubit({required this.client}) : super(CoffeeInitial());
 
+  /// Method to fetch the coffee image
   Future<void> fetchImageUrl() async {
     try {
       emit(CoffeeLoading());
@@ -24,7 +26,6 @@ class CoffeeCubit extends Cubit<CoffeeState> {
                 "Failed to fetch the coffee image due to non-200 status code."));
       }
     } catch (e) {
-      // Emit the error message without redundant "Exception:" prefixes
       emit(CoffeeError(errorMessage: "Failed to fetch image: ${e.toString()}"));
     }
   }
