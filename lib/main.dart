@@ -171,7 +171,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     getGalleryPermissions();
-    context.read<CoffeeCubit>().fetchImageUrl();
     super.initState();
   }
 
